@@ -212,17 +212,6 @@ resource "aws_instance" "game_instance" {
     Name    = "game-${count.index + 1}"
     Owner   = "Oleh Lozhynskyi"
   }
-
-  user_data = <<EOF
-#!/bin/bash
-sudo apt-get update -y \
-sudo apt-get upgrade -y \
-sudo apt install software-properties-common -y \
-sudo apt install docker.io -y \
-sudo apt-get install awscli -y \
-sudo  usermod -aG docker ubuntu
-EOF
-
 }
 
   ### Public Network ###
@@ -243,17 +232,6 @@ resource "aws_instance" "nginx_instance" {
     Name    = "nginx"
     Owner   = "Oleh Lozhynskyi"
   }
-
-  user_data = <<EOF
-#!/bin/bash
-sudo apt-get update -y \
-sudo apt-get upgrade -y \
-sudo apt install software-properties-common -y \
-sudo apt install docker.io -y \
-sudo apt-get install awscli -y \
-sudo  usermod -aG docker ubuntu
-EOF
-
 }
 
 
