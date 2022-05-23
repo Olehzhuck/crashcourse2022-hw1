@@ -214,13 +214,13 @@ resource "aws_instance" "game_instance" {
   }
 
   user_data = <<EOF
-sudo apt-get update -y
-sudo apt-get upgrade -y
-sudo apt install docker.io -y
-sudo apt install software-properties-common -y
-sudo apt-get install awscli -y
-sudo usermod -aG docker ubuntu
-sudo reboot now
+apt-get update -y
+apt-get upgrade -y
+apt install software-properties-common -y
+apt install docker.io -y
+apt-get install awscli -y
+usermod -aG docker ubuntu
+reboot now
 EOF
 
 }
@@ -245,13 +245,13 @@ resource "aws_instance" "nginx_instance" {
   }
 
   user_data = <<EOF
-sudo apt-get update -y
-sudo apt-get upgrade -y
-sudo apt install docker.io -y
-sudo apt install software-properties-common -y
-sudo apt-get install awscli -y
-sudo usermod -aG docker ubuntu
-sudo reboot now
+apt-get update -y
+apt-get upgrade -y
+apt install software-properties-common -y
+apt install docker.io -y
+apt-get install awscli -y
+usermod -aG docker ubuntu
+reboot now
 EOF
 
 }
