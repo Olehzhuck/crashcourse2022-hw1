@@ -1,2 +1,7 @@
 # crashcourse2022-hw1
-21.03.2022
+Terraform infrastructure
+
+terraform init
+terraform plan
+terraform apply
+terraform destroy
